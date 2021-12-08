@@ -21,7 +21,7 @@ utils.seed_rng(args.seed)
 sentence = args.text
 
 print('Generating:', sentence)
-G, config = get_G(512) # Choose from 256 and 512
+G, config = get_G(256) # Choose from 256 and 512
 generator = FuseDreamBaseGenerator(G, config, 10) 
 z_cllt, y_cllt = generator.generate_basis(sentence, init_iters=INIT_ITERS, num_basis=5)
 
